@@ -3,16 +3,19 @@ module main
 import std/os/file
 import std/os/path
 
+import ast
 import parser
 import utils
+import pretty-print
 
 /*
-1. Lexer    done
-2. Parser   done
-3. Eval     done
-4. AST      done
-5. IO       done
+1. Lexer            done
+2. Parser           done
+3. Eval             done
+4. AST              done
+5. IO               done
 6. CLI
+7. Pretty printer   done
 */
 
 // IOs
@@ -27,4 +30,12 @@ CONTACT="User : ${USER}\nEMAIL : ${EMAIL}"
 "#
 
 fun main()
-  "sample.env".path.parse-file
+  val doc = "sample.env".path.parse-file
+  "====================".println
+  "The AST: ".print
+  doc.println
+
+  "====================".println
+  "Pretty print: ".println
+  doc.pretty.println
+
