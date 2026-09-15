@@ -82,6 +82,7 @@ pub fun pairp()
   val nm = namep()
   token("=")
   val vl = valuep()
+  // BUG: it doesn't parse inline comment so the comment become line-wise comment
   val cm =
     "".optional
       commentp()
