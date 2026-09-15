@@ -137,10 +137,10 @@ pub fun document/interp(doc : document) : document
 // EMAIL=${USER}@email.com
 // CONTACT="User : ${USER}\nEMAIL : ${EMAIL}"
 // ```
-val example/document =
+pub val example/document =
   Document([
-    Pair(name/make("USER"),    Str("admin"),                            [], ""),
-    Pair(name/make("EMAIL"),   Str("${USER}@email.com"),                [], ""),
-    Pair(name/make("CONTACT"), Str("User : ${USER}\nEMAIL : ${EMAIL}"), [], ""),
+    Pair(name/make("USER"),    Str("admin")),
+    Pair(name/make("EMAIL"),   Str("${USER}@email.com")),
+    Pair(name/make("CONTACT"), Str("User : ${USER}\nEMAIL : ${EMAIL}")),
   ])
 
