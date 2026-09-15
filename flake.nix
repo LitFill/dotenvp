@@ -21,7 +21,7 @@
       {
         packages.default = pkgs.stdenv.mkDerivation {
           pname = "dotenvp";
-          version = "0.0.1";
+          version = "0.0.3";
           src = ./.;
           nativeBuildInputs = with pkgs; [
             koka
