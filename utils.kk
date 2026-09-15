@@ -40,3 +40,10 @@ pub fun string/unescape(str : string)
 // escape escape-sequences from string, so real newline becomes \n
 pub fun string/escape(str : string)
   str.list.escape.string
+
+// useful for pretty printing
+pub fun if-empty-then-empty(xs : a, f : a -> e string, ?is-empty : a -> e bool) : e string
+  if xs.is-empty
+  then ""
+  else xs.f
+
